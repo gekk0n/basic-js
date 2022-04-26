@@ -15,15 +15,14 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function countCats (backyard) {
-let result = []
 let counter = 0
-  for (let i = 0; i <= backyard.length-1; i++) {
-    result = backyard[i].filter(el => {
+for (let i = 0; i <= backyard.length-1; i++) {
+  backyard[i].filter(el => {
     if (el === '^^') {
     counter = counter + 1
     }
   })
-  }
+}
 return counter
 }
 
