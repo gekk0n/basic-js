@@ -16,14 +16,10 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function countCats (backyard) {
 let counter = 0
-for (let i = 0; i <= backyard.length-1; i++) {
-  backyard[i].filter(el => {
-    if (el === '^^') {
-    counter = counter + 1
-    }
-  })
-}
-return counter
+for (let i = 0; i < backyard.length; i++) {
+  backyard[i].filter(el => {counter = el === '^^' ? counter +=1 : counter})
+      }
+  return counter
 }
 
 module.exports = {
