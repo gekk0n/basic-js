@@ -19,7 +19,7 @@ function deleteDigit(n) {
     resultArr.push(Number(arr.join('')))
         arr.splice(i,0, deleted)
   }
-  let result = Math.max.apply(null, resultArr)
+  let result = Math.max(...resultArr)
   return result
 }
 
